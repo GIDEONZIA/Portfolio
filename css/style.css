@@ -1,0 +1,95 @@
+/* ==== GLOBAL STYLES ==== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* ==== CONTAINER ==== */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ==== HEADER ==== */
+
+.header-section {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.main-nav {
+  margin-top: 0.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* ==== INTRO SECTION ==== */
+
+.intro-section {
+  padding: 3rem 0;
+  background: #fff;
+  text-align: center;
+}
+
+.intro-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro-section p {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ==== FOOTER ==== */
+
+.footer-section {
+  background-color: #222;
+  color: #bbb;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-section a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
