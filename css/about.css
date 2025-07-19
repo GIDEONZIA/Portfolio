@@ -1,115 +1,113 @@
-/* about.css - Professional styling for Mr Gwiternz Portfolio About Section */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-:root {
-    --primary: #1a2236;
-    --accent: #ffb400;
-    --bg: #f7f8fa;
-    --text: #222;
-    --heading: #1a2236;
-    --card-bg: #fff;
-    --border-radius: 12px;
-    --shadow: 0 2px 16px rgba(26,34,54,0.08);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: 'Inter', Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    margin: 0;
-    padding: 0;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f1f1f1;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.hero-card {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: linear-gradient(to right, #141e30, #243b55);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.2);
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(0, 255, 204, 0.4);
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #00ffd5;
+  margin-bottom: 1rem;
 }
 
 .about-section {
-    padding: 48px;
-    background: var(--bg);
-    
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 1s ease-in-out;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 12px 24px 24px 12px;
+.about-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #00ffd9;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #00ffd9;
+  padding-bottom: 0.5rem;
 }
 
-h2 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--heading);
-    margin-bottom: 16px;
-    letter-spacing: 1px;
-}
-
-.intro {
-    font-size: 1.15rem;
-    margin-bottom: 32px;
-    background: var(--card-bg);
-    padding: 18px 24px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    border-left: 4px solid var(--accent);
+.intro, .journey, .career-path, .passion, .future {
+  margin-bottom: 2.5rem;
+  animation: slideUp 1s ease-in-out forwards;
+  opacity: 0;
 }
 
 .about-section h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin-top: 32px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  color: #00ffc3;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .about-section p {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 0;
-    color: var(--text);
-    transform: translateY(-5px);
-}
-
-.journey, .career-path, .passion, .future {
-    background: var(--card-bg);
-    padding: 20px 24px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    margin-bottom: 24px;
-    border-left: 3px solid var(--accent);
-    transition: box-shadow 0.2s;
-}
-
-.journey:hover, .career-path:hover, .passion:hover, .future:hover {
-    box-shadow: 0 4px 24px rgba(26,34,54,0.13);
-    transform: translateY(-5px);
-
-
+  font-size: 1.1rem;
+  color: #e0e0e0;
 }
 
 strong {
-    color: var(--accent);
-    font-weight: 700;
+  color: #ffffff;
+  background: #1b3f39;
+  padding: 0 6px;
+  border-radius: 6px;
 }
 
-@media (max-width: 600px) {
-    .container {
-        padding: 0 10px;
-    }
-    h2 {
-        font-size: 1.5rem;
-    }
-    .about-section h3 {
-        font-size: 1.1rem;
-    }
-    .journey, .career-path, .passion, .future, .intro {
-        padding: 14px 12px;
-    }
-    .journey:hover, .career-path:hover, .passion:hover, .future:hover, .intro:hover {
-        box-shadow: 0 2px 16px rgba(26,34,54,0.16);
-        border-left-color: #ffd966;
-        background: #fdf6e3;
-        transform: translateY(-5px);
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
-    }
+/* Magic Animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Mr Gwiternz Developer Portfolio - Projects, Journey, and About Me" />
+  <meta name="keywords" content="Mr Gwiternz, developer, portfolio, Django, web development, full stack, software engineer" />
+  <meta name="author" content="Mr Gwiternz" />
   <title>MR~GWITERNZ | Developer Portfolio</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
@@ -23,22 +25,84 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="main-section">
-    <section class="intro-section">
-      <div class="container">
-        <h2>Welcome to My Developer Portfolio</h2>
-        <p>I’m a full-stack web developer focused on building real-world solutions using Django, JavaScript, and modern web technologies.</p>
-      </div>
-    </section>
-  </main>
+  
+  <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-card">
+    <img src="image.png" alt="Mr Gwiternz" class="profile-img" />
+    <h2>Mr Gwiternz</h2>
+    <p>Full Stack Developer | Drummer | Driver</p>
+    <a href="#skills" class="btn-primary">Explore My Skills</a>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills-section" id="skills">
+  <h2>My Skills</h2>
+
+  <div class="skill">
+    <h4>HTML & CSS</h4>
+    <div class="skill-bar"><div class="bar-fill" data-width="90%"></div></div>
+  </div>
+
+  <div class="skill">
+    <h4>JavaScript</h4>
+    <div class="skill-bar"><div class="bar-fill" data-width="85%"></div></div>
+  </div>
+
+  <div class="skill">
+    <h4>Django</h4>
+    <div class="skill-bar"><div class="bar-fill" data-width="80%"></div></div>
+  </div>
+
+  <div class="skill">
+    <h4>React</h4>
+    <div class="skill-bar"><div class="bar-fill" data-width="75%"></div></div>
+  </div>
+</section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h3>What People Say</h3>
+      <blockquote>
+        <p>“Mr Gwiternz is one of the most passionate developers I've worked with. He turns complex ideas into clean, scalable code.”</p>
+        <cite>— A Satisfied Collaborator</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="container">
+      <h3>Let's Connect</h3>
+      <p>Want to build something together? I'm open to collaborations, freelance work, and full-time roles.</p>
+      <a class="btn-secondary" href="gwiternz@gmail.com">Email Me</a>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="footer-section">
     <div class="container">
       <p>&copy; 2025 MR~GWITERNZ | Made with 💻, 🎸 and ☕</p>
-      <p><a href="mailto:contact@mr-gwiternz.dev">Contact Me</a></p>
     </div>
   </footer>
+
+  <script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const bars = document.querySelectorAll(".bar-fill");
+        bars.forEach(bar => {
+          const width = bar.getAttribute("data-width");
+          bar.style.width = width;
+        });
+      }
+    });
+  });
+
+  observer.observe(document.querySelector("#skills"));
+</script>
+
 </body>
 </html>
